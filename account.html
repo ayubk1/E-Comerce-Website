@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All products - RedStore</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"/>
+  </head>
+
+  <body>
+    <header>
+      <div class="container1">
+          <nav>
+            <div class="logo1">
+             <a href="index.html"> <img src="./images/logo.png" class="logo1" alt="" /></a>
+            </div>
+            <div class="navitems">
+              <ul id="menuitemss">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+                <li><a href="account.html">Account</a></li> 
+              </ul>
+            </div>
+            <a href="cart.html"><img src="./images/cart.png" alt="" width="30px" height="30px" /></a>
+            <img
+              src="./images/menu.png"
+              alt=""
+              class="menuicon"
+              onclick="togglemenu()"
+            />
+          </nav>
+      </div>
+    </header>
+
+
+    <main>
+        <section class="account-sec">
+            <div class="account-container">
+             <div class="account-row">
+             <div class="account-col">
+                <img src="./images/image1.png" width="100%" alt="">
+             </div>
+             <div class="account-col">
+                <div class="login-register">
+                    <div class="form-btn">
+                        <span onclick="login()" >Login</span>
+                        <span onclick="register()" >register</span>
+                        <hr id="indicatorr">
+                    </div>
+                    <form id="loginn">
+                      <input type="text" placeholder="username">
+                      <input type="password" placeholder="password">
+                      <button type="submit" class="btn">Login</button>
+                      <a href="">Forgot password</a>
+                    </form>
+
+                    <form id="registerr">
+                        <input type="text" placeholder="username">
+                        <input type="email" placeholder="email">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">register</button>
+                    </form>
+
+
+                </div>
+             </div>
+           
+            </div>
+           </div>
+
+        </section> 
+    </main>
+
+    <footer>
+      <div class="foot">
+        <div class="container8">
+          <div class="row8">
+            <div class="col8">
+              <h3>Download our app</h3>
+              <p>DOwnload app for android and ios mobile phone</p>
+              <div class="playstorelogo">
+                <img src="./images/play-store.png" alt="">
+                <img src="./images/app-store.png" alt="">
+              </div>
+            </div>
+
+            <div class="col9">
+              <img src="./images/logo-white.png" alt="" />
+              <p>
+                Our purpose is to make sustainably make the pleasure and
+                benefits of sports accessible to the many.
+              </p>
+            </div>
+
+            <div class="col10">
+              <h3>Useful Links</h3>
+              <ul>
+                <li>Coupons</li>
+                <li>Blog Post</li>
+                <li>Return Policy</li>
+                <li>Join Affiliate</li>
+              </ul>
+            </div>
+            <div class="col11">
+              <h3>Follow us</h3>
+              <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>YouTube</li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <p class="copyright">COpyright 2023 - Ayub Project</p>
+        </div>
+      </div>
+      
+    </footer>
+
+    <script>
+      var menuitemss = document.getElementById("menuitemss");
+      menuitemss.style.maxHeight = "0px";
+      function togglemenu(){
+        if(menuitemss.style.maxHeight == "0px"){
+          menuitemss.style.maxHeight = "200px";
+        }
+        else{ 
+          menuitemss.style.maxHeight = "0px";
+
+        }
+      }
+
+    </script>
+    
+    <script>
+
+     var loginn = document.getElementById("loginn");
+     var registerr = document.getElementById("registerr");
+     var indicator = document.getElementById("indicatorr");
+ 
+     function register(){
+        registerr.style.transform = "translateX(0px)";
+        loginn.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(100px)";
+
+     }
+     
+     function login(){
+        registerr.style.transform = "translateX(300px)";
+        loginn.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+     }
+
+    
+
+    </script>
+     
+
+  </body>
+</html>
